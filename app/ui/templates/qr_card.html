@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}QR card - Kanwar Sahayata (Demo){% endblock %}
+{% block content %}
+<div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 max-w-md mx-auto text-center">
+  <div class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wide rounded-full px-3 py-1 mb-4">Registration complete</div>
+  <h1 class="text-2xl font-bold">{{ pilgrim.full_name }}</h1>
+  <p class="text-slate-500 text-sm mb-6">{{ pilgrim.phone }}</p>
+  <img src="{{ qr_data_uri }}" alt="Pilgrim QR code" class="mx-auto w-56 h-56 rounded-xl border border-slate-200">
+  <p class="text-xs text-slate-400 mt-4">Show this QR at any checkpoint to check in. Demo QR - not valid for a real yatra.</p>
+  <div class="mt-6 flex gap-3 justify-center">
+    <a href="/ui/register" class="bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg px-5 py-2.5 text-sm">Register another</a>
+    <a href="/ui/dashboard" class="bg-white border border-slate-300 font-semibold rounded-lg px-5 py-2.5 text-sm">Dashboard</a>
+  </div>
+</div>
+{% endblock %}

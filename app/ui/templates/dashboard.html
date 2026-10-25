@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - Kanwar Sahayata (Demo){% endblock %}
+{% block content %}
+<h1 class="text-2xl font-bold mb-1">Control dashboard</h1>
+<p class="text-sm text-slate-500 mb-6">Season: {{ season.name }}</p>
+<div class="grid grid-cols-3 gap-4 mb-8">
+  <div class="bg-white rounded-2xl border border-slate-200 p-5">
+    <div class="text-3xl font-bold">{{ pilgrim_count }}</div>
+    <div class="text-sm text-slate-500">Registered pilgrims</div>
+  </div>
+  <div class="bg-white rounded-2xl border border-slate-200 p-5">
+    <div class="text-3xl font-bold">{{ route_count }}</div>
+    <div class="text-sm text-slate-500">Routes</div>
+  </div>
+  <div class="bg-white rounded-2xl border border-slate-200 p-5">
+    <div class="text-3xl font-bold">{{ checkpoint_count }}</div>
+    <div class="text-sm text-slate-500">Checkpoints</div>
+  </div>
+</div>
+<div class="space-y-3">
+  <a href="/ui/register" class="block bg-emerald-700 hover:bg-emerald-800 text-white rounded-2xl p-5 font-semibold">Register a pilgrim &rarr;</a>
+  <div class="block bg-white rounded-2xl border border-dashed border-slate-300 p-5 text-slate-400">
+    Checkpoint check-in - not available in this demo
+  </div>
+  <div class="block bg-white rounded-2xl border border-dashed border-slate-300 p-5 text-slate-400">
+    SOS control room - not available in this demo
+  </div>
+</div>
+{% endblock %}

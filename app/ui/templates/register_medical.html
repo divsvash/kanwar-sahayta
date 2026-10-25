@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Medical - Kanwar Sahayata (Demo){% endblock %}
+{% block content %}
+<div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 max-w-md mx-auto">
+  <p class="text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">Step 4 of 5</p>
+  <h1 class="text-xl font-bold mb-1">Medical info</h1>
+  <p class="text-sm text-slate-500 mb-6">Used only if the pilgrim needs help on the route. All optional.</p>
+  <form method="post" action="/ui/register/medical" class="space-y-4">
+    <div>
+      <label class="block text-sm font-medium mb-1">Blood group</label>
+      <select name="blood_group" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+        <option value="">Unknown</option>
+        <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+        <option>AB+</option><option>AB-</option><option>O+</option><option>O-</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm font-medium mb-1">Conditions <span class="text-slate-400">(comma separated)</span></label>
+      <input name="medical_flags" placeholder="diabetes, asthma" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+    </div>
+    <div>
+      <label class="block text-sm font-medium mb-1">Allergies <span class="text-slate-400">(comma separated)</span></label>
+      <input name="allergies" placeholder="penicillin" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+    </div>
+    <div>
+      <label class="block text-sm font-medium mb-1">Current medications <span class="text-slate-400">(comma separated)</span></label>
+      <input name="current_medications" class="w-full rounded-lg border border-slate-300 px-3 py-2">
+    </div>
+    <button class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg py-2.5">Continue</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Log in - Kanwar Sahayata (Demo){% endblock %}
+{% block content %}
+<div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 max-w-md mx-auto">
+  <h1 class="text-xl font-bold mb-1">Operator login</h1>
+  <p class="text-sm text-slate-500 mb-6">District staff sign in with phone + 4-digit PIN.</p>
+  <form method="post" action="/ui/login" class="space-y-4">
+    <div>
+      <label class="block text-sm font-medium mb-1">Phone</label>
+      <input name="phone" inputmode="numeric" required placeholder="9000000001"
+             class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600">
+    </div>
+    <div>
+      <label class="block text-sm font-medium mb-1">PIN</label>
+      <input name="pin" type="password" inputmode="numeric" maxlength="4" required placeholder="1234"
+             class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600">
+    </div>
+    <button class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold rounded-lg py-2.5">Log in</button>
+  </form>
+  <div class="mt-6 text-xs text-slate-500 leading-relaxed">
+    Demo accounts: admin 9000000001, control room 9000000002, camp operator 9000000003 - PIN 1234 for all.
+  </div>
+</div>
+<div class="text-center mt-6">
+  <a href="/ui/register" class="text-emerald-800 font-medium underline underline-offset-2">Pilgrim? Register here instead</a>
+</div>
+{% endblock %}
